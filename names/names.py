@@ -17,8 +17,10 @@ duplicates = []
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-tree = binarysearch(names_1[0])
+tree = BinarySearchTree(names_1[0])
 
+for name in range(1,len(names_1)):
+    tree.insert(names_1[name])
 for name_2 in names_2:
     if (tree.contains(name_2)):
         duplicates.append(name_2)
